@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/*variables*/
+/*mixins*/
+body {
+  margin: 0px;
+}
+body h1, body h2, body h3, body h4, body p, body button, body li {
+  font-family: Roboto, sans-serif;
+}
+body p {
+  font-size: small;
+}
+
+/*section formulaire*/
+.part-lieu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EDEDED;
+  height: 50px;
+  box-shadow: 0px 2px 2px #B1B1B1;
+}
+.part-lieu i {
+  color: #242424;
+  font-size: 14px;
+  padding-right: 6px;
+}
+.part-lieu input {
+  border: none;
+  background-color: #EDEDED;
+  width: 95px;
+}
+.part-lieu input::-moz-placeholder {
+  color: #242424;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+}
+.part-lieu input::placeholder {
+  color: #242424;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+}
+
+/* section réservation*/
+.part-reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F7F7F7;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 3px;
+  height: 210px;
+}
+.part-reservation h2, .part-reservation p {
+  text-align: center;
+}
+.part-reservation h2 {
+  margin-bottom: 0px;
+}
+.part-reservation button {
+  border-radius: 50px;
+  height: 35px;
+  width: 170px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  box-shadow: 1px 2px 4px rgba(121, 117, 116, 0.5);
+  color: white;
+  font-size: 12px;
+}
+
+/*section fonctionnement*/
+.part-fonctionnement {
+  margin: 15px;
+}
+.part-fonctionnement ul {
+  list-style-type: none;
+  padding: auto;
+}
+.part-fonctionnement li {
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #F7F7F7;
+  box-shadow: 1px 2px 4px rgba(121, 117, 116, 0.5);
+  height: 60px;
+  width: 90%;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.part-fonctionnement li .puce-liste {
+  background-color: #9356DC;
+  color: white;
+  font-weight: lighter;
+  font-size: small;
+  border-radius: 50%;
+  padding: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+  position: relative;
+  right: 8px;
+}
+.part-fonctionnement li i {
+  padding: 10px;
+  color: #797574;
+  padding-left: 5px;
+}
+.part-fonctionnement li .i-couleur {
+  color: #9356DC;
+}
+
+/*section restaurant*/
+.part-restaurants {
+  background-color: #EDEDED;
+  padding: 15px;
+}
+.part-restaurants a {
+  width: 100%;
+  color: black;
+  text-decoration: none;
+}
+.part-restaurants article {
+  background-color: white;
+  border-radius: 25px;
+  margin-bottom: 15px;
+}
+.part-restaurants img {
+  width: 100%;
+  height: 170px;
+  border-radius: 25px 25px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.part-restaurants .carte-texte {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+  margin-left: 20px;
+}/*# sourceMappingURL=style.css.map */
