@@ -1,0 +1,26 @@
+footer {
+  background-color: #3C3C3C;
+  color: white;
+  height: 170px;
+}
+footer img {
+  color: white;
+  width: 100px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+footer ul {
+  list-style-type: none;
+  margin-left: 0px;
+}
+footer ul li {
+  padding-bottom: 5px;
+}
+footer ul i {
+  padding-right: 10px;
+  font-size: 12px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}/*# sourceMappingURL=footer.css.map */

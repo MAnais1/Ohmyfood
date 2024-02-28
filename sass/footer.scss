@@ -1,0 +1,30 @@
+@mixin liens{
+    color: white;
+    text-decoration: none;
+}
+
+footer{
+    background-color: #3C3C3C;
+    color: white;
+    height: 170px;
+    & img {
+        color: white;
+        width: 100px;
+        margin-left:20px ;
+        margin-top: 25px
+    }
+    & ul{
+        list-style-type: none; 
+        margin-left: 0px;
+        & li{
+            padding-bottom: 5px;
+        }
+        & i{
+            padding-right: 10px;
+            font-size: 12px;
+        }
+    }
+
+    a{
+        @include liens;}
+}
