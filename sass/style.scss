@@ -2,8 +2,12 @@
 $couleur-primaire: #9356DC;
 $couleur-secondaire:#FF79DA;
 $couleur-tertiaire:#99E2D0;
-$marge:15px;
-$ombre:1px 2px 4px rgba($color: #797574, $alpha: 0.5);
+$couleur-texte1:#353535;
+$couleur-fond1:#EAEAEA;
+$couleur-fond2:#F6F6F6;
+$marge:20px;
+$ombre:0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+$degrade:linear-gradient($couleur-secondaire, $couleur-primaire );
 
 /*mixins*/ 
 @mixin liens{
@@ -14,6 +18,7 @@ $ombre:1px 2px 4px rgba($color: #797574, $alpha: 0.5);
 
 body{
     margin: 0px;
+    min-width: 375px;
     h1, h2, h3, h4, p, button, li{
         font-family: Roboto,sans-serif;
     }
@@ -29,22 +34,23 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #EDEDED;
+    background-color: $couleur-fond1;
     height: 50px;
-    box-shadow: 0px 2px 2px #B1B1B1;
+    box-shadow: 0px 1px 5px $couleur-texte1;
     & i{
-        color: #242424;
-       font-size: 14px;
-        padding-right: 6px;
+        color: $couleur-texte1;
+       font-size: 16px;
+        padding-right: 17px;
     }
     & input{
         border: none;
-        background-color: #EDEDED;
-        width: 95px;
+        background-color: $couleur-fond1;
+        width: 110px;
         &::placeholder{
-            color: #242424;
+            color: $couleur-texte1;
             font-family: Roboto, sans-serif;
-            font-weight: bold;
+            font-weight: 500;
+            font-size: 16px;
         }
     }
 }
@@ -54,63 +60,84 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #F7F7F7;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-top: 3px;
-    height:210px;
+    background-color: $couleur-fond2;
+    margin-top: 4px;
+    height:300px;
     & h2, p{
         text-align: center;
     }
     & h2{
         margin-bottom: 0px;
+        margin-top: 35px;
+        width: 275px;
+    }
+    & p {
+        color: $couleur-texte1;
+        font-size: 18px;
+        font-weight: 300;
+        width: 315px;
+        margin-bottom: 27px;
     }
     & button{
-        border-radius: 50px;
-        height: 35px;
-        width: 170px;
-        background: linear-gradient($couleur-secondaire, $couleur-primaire );
+        border-radius: 25px;
+        height: 50px;
+        width: 218px;
+        background: $degrade;
         border: none;
         box-shadow: $ombre;
         color: white;
-        font-size: 12px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    & button:hover {
+        background-color: lighten($color: $degrade, $amount: 20);
     }
 }
 
 /*section fonctionnement*/
 .part-fonctionnement{
     margin: $marge;
+    height: 390px;
+    & h2{
+        margin-top: 50px;
+        margin-bottom: 35px;
+    }
     & ul{
         list-style-type: none;
-        padding: auto; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     & li{
         display: flex;
         align-items: center;
-        border-radius: 15px;
-        background-color: #F7F7F7;
+        border-radius: 20px;
+        background-color: $couleur-fond2;
         box-shadow: $ombre;
-        height: 60px;
-        width: 90%;
-        margin-bottom: 15px;
-        font-weight:bold ;
+        height: 72.379px;
+        width: 322.486px;
+        margin-bottom: 24px;
+        font-weight:500;
+        font-size: 16px;
         & .puce-liste{
             background-color: $couleur-primaire;
             color: white;
-            font-weight: lighter;
-            font-size: small;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight:500;
+            font-size: 15px;
             border-radius: 50%;
-            padding: 3px;
-            padding-left: 6px;
-            padding-right: 6px;
+            width: 24px;
+            height: 24px;
             position: relative;
-            right: 8px;
+            right: 10px;
             
         }
         & i{
-           padding: 10px;
-           color: #797574;
-           padding-left: 5px;
+           padding:25px;
+           color: #7e7e7e;
+           padding-left: 15px;
         }
         & .i-couleur{
             color: $couleur-primaire;
@@ -123,19 +150,36 @@ body{
     background-color: #EDEDED;
     padding: $marge;
     & a{
-        width: 100%;
         @include liens;
-        
+        display: flex;
+        justify-content: center;
     }
     & article{
         background-color: white;
         border-radius: 25px ;
         margin-bottom: 15px;
-        
-
+        width: 340px;
+    }
+    & .carte-image{
+        display: flex;
+        justify-content: flex-end;
+    }
+    & .etiquette-nouveau{
+        width: 80px;
+        height: 29px;
+        font-weight: 500;
+        color: darken($color: $couleur-tertiaire, $amount: 40);
+        background-color: $couleur-tertiaire;
+        display: flex;
+        flex-direction:column-reverse;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+        position: absolute;
+        margin-right: 15px;
     }
     & img{
-        width: 100%;
+        width: 340px;
         height: 170px;
         border-radius: 25px 25px 0px 0px;
         object-fit: cover;
@@ -145,16 +189,20 @@ body{
         align-items: center;
         justify-content: space-between;
         margin-right: 20px;
-        margin-left: 20px;
+        margin-left: 15px;
         & i{
-            font-size: 20px;
+            width: 22px;
+            height: 21px;
         }
+        
         & h3{
             margin-top: 10px;
             margin-bottom: 0px;
+            
         }
         & p{
             font-size: 17px;
+            font-weight: 300;
             margin-top: 0px;
         }
         

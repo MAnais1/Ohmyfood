@@ -3,6 +3,7 @@
 /*mixins*/
 body {
   margin: 0px;
+  min-width: 375px;
 }
 body h1, body h2, body h3, body h4, body p, body button, body li {
   font-family: Roboto, sans-serif;
@@ -16,29 +17,31 @@ body p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #EDEDED;
+  background-color: #EAEAEA;
   height: 50px;
-  box-shadow: 0px 2px 2px #B1B1B1;
+  box-shadow: 0px 1px 5px #353535;
 }
 .part-lieu i {
-  color: #242424;
-  font-size: 14px;
-  padding-right: 6px;
+  color: #353535;
+  font-size: 16px;
+  padding-right: 17px;
 }
 .part-lieu input {
   border: none;
-  background-color: #EDEDED;
-  width: 95px;
+  background-color: #EAEAEA;
+  width: 110px;
 }
 .part-lieu input::-moz-placeholder {
-  color: #242424;
+  color: #353535;
   font-family: Roboto, sans-serif;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 16px;
 }
 .part-lieu input::placeholder {
-  color: #242424;
+  color: #353535;
   font-family: Roboto, sans-serif;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 /* section réservation*/
@@ -46,64 +49,85 @@ body p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #F7F7F7;
-  padding-left: 10%;
-  padding-right: 10%;
-  margin-top: 3px;
-  height: 210px;
+  background-color: #F6F6F6;
+  margin-top: 4px;
+  height: 300px;
 }
 .part-reservation h2, .part-reservation p {
   text-align: center;
 }
 .part-reservation h2 {
   margin-bottom: 0px;
+  margin-top: 35px;
+  width: 275px;
+}
+.part-reservation p {
+  color: #353535;
+  font-size: 18px;
+  font-weight: 300;
+  width: 315px;
+  margin-bottom: 27px;
 }
 .part-reservation button {
-  border-radius: 50px;
-  height: 35px;
-  width: 170px;
+  border-radius: 25px;
+  height: 50px;
+  width: 218px;
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
-  box-shadow: 1px 2px 4px rgba(121, 117, 116, 0.5);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   color: white;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.part-reservation button:hover {
+  background-color: #c9abee;
 }
 
 /*section fonctionnement*/
 .part-fonctionnement {
-  margin: 15px;
+  margin: 20px;
+  height: 390px;
+}
+.part-fonctionnement h2 {
+  margin-top: 50px;
+  margin-bottom: 35px;
 }
 .part-fonctionnement ul {
   list-style-type: none;
-  padding: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .part-fonctionnement li {
   display: flex;
   align-items: center;
-  border-radius: 15px;
-  background-color: #F7F7F7;
-  box-shadow: 1px 2px 4px rgba(121, 117, 116, 0.5);
-  height: 60px;
-  width: 90%;
-  margin-bottom: 15px;
-  font-weight: bold;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  height: 72.379px;
+  width: 322.486px;
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 16px;
 }
 .part-fonctionnement li .puce-liste {
   background-color: #9356DC;
   color: white;
-  font-weight: lighter;
-  font-size: small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
   border-radius: 50%;
-  padding: 3px;
-  padding-left: 6px;
-  padding-right: 6px;
+  width: 24px;
+  height: 24px;
   position: relative;
-  right: 8px;
+  right: 10px;
 }
 .part-fonctionnement li i {
-  padding: 10px;
-  color: #797574;
-  padding-left: 5px;
+  padding: 25px;
+  color: #7e7e7e;
+  padding-left: 15px;
 }
 .part-fonctionnement li .i-couleur {
   color: #9356DC;
@@ -112,20 +136,40 @@ body p {
 /*section restaurant*/
 .part-restaurants {
   background-color: #EDEDED;
-  padding: 15px;
+  padding: 20px;
 }
 .part-restaurants a {
-  width: 100%;
   color: black;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
 .part-restaurants article {
   background-color: white;
   border-radius: 25px;
   margin-bottom: 15px;
+  width: 340px;
+}
+.part-restaurants .carte-image {
+  display: flex;
+  justify-content: flex-end;
+}
+.part-restaurants .etiquette-nouveau {
+  width: 80px;
+  height: 29px;
+  font-weight: 500;
+  color: #278870;
+  background-color: #99E2D0;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  position: absolute;
+  margin-right: 15px;
 }
 .part-restaurants img {
-  width: 100%;
+  width: 340px;
   height: 170px;
   border-radius: 25px 25px 0px 0px;
   -o-object-fit: cover;
@@ -136,10 +180,11 @@ body p {
   align-items: center;
   justify-content: space-between;
   margin-right: 20px;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 .part-restaurants .carte-texte i {
-  font-size: 20px;
+  width: 22px;
+  height: 21px;
 }
 .part-restaurants .carte-texte h3 {
   margin-top: 10px;
@@ -147,5 +192,6 @@ body p {
 }
 .part-restaurants .carte-texte p {
   font-size: 17px;
+  font-weight: 300;
   margin-top: 0px;
 }/*# sourceMappingURL=style.css.map */
