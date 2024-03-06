@@ -5,11 +5,8 @@ body {
   margin: 0px;
   min-width: 375px;
 }
-body h1, body h2, body h3, body h4, body p, body button, body li {
+body h1, body h2, body h3, body h4, body p, body button, body a, body li {
   font-family: Roboto, sans-serif;
-}
-body p {
-  font-size: small;
 }
 
 /*section formulaire*/
@@ -79,8 +76,12 @@ body p {
   font-size: 16px;
   font-weight: 500;
 }
-.part-reservation button:hover {
-  background-color: #c9abee;
+.part-reservation a {
+  transition: all 1000ms;
+}
+.part-reservation a :hover {
+  transform: scale(1.001);
+  opacity: 0.9;
 }
 
 /*section fonctionnement*/

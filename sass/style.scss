@@ -19,13 +19,11 @@ $degrade:linear-gradient($couleur-secondaire, $couleur-primaire );
 body{
     margin: 0px;
     min-width: 375px;
-    h1, h2, h3, h4, p, button, li{
+    h1, h2, h3, h4, p, button, a, li{
         font-family: Roboto,sans-serif;
     }
-    p{
-        font-size: small;
-    }
 }
+
 
 
 
@@ -79,6 +77,7 @@ body{
         margin-bottom: 27px;
     }
     & button{
+       
         border-radius: 25px;
         height: 50px;
         width: 218px;
@@ -88,9 +87,14 @@ body{
         color: white;
         font-size: 16px;
         font-weight: 500;
-    }
-    & button:hover {
-        background-color: lighten($color: $degrade, $amount: 20);
+    } 
+    & a{
+        transition: all 1000ms;
+        & :hover{
+            transform: scale(1.001);
+            opacity: 0.9;
+            
+        }
     }
 }
 
