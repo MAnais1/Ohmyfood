@@ -1,0 +1,430 @@
+@charset "UTF-8";
+body {
+  margin: 0px;
+  min-width: 375px;
+}
+body h1, body h2, body h3, body h4, body p, body button, body a, body li {
+  font-family: Roboto, sans-serif;
+}
+body .menu h1 {
+  font-family: shrikhand;
+  text-align: center;
+}
+body .menu h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+body .menu p {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/*mixins*/
+/*header*/
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  box-shadow: 0px 7px 6px #B1B1B1;
+}
+header img {
+  width: 197px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+header a {
+  position: absolute;
+  left: 17px;
+  color: black;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  height: 170px;
+  padding-bottom: 15px;
+}
+footer img {
+  filter: invert(100);
+  width: 139px;
+  height: 27px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+footer ul {
+  list-style-type: none;
+  margin-left: 0px;
+}
+footer ul li {
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+footer ul i {
+  padding-right: 15px;
+  width: 11px;
+  height: 13px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+@media screen and (min-width: 992px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: end;
+  }
+  footer img {
+    padding: 0px 50px 20px 50px;
+  }
+  footer ul {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.part-lieu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+  height: 50px;
+  box-shadow: 0px 1px 5px #353535;
+}
+.part-lieu i {
+  color: #353535;
+  font-size: 16px;
+  padding-right: 17px;
+}
+.part-lieu input {
+  border: none;
+  background-color: #EAEAEA;
+  width: 110px;
+}
+.part-lieu input::-moz-placeholder {
+  color: #353535;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+.part-lieu input::placeholder {
+  color: #353535;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* section réservation*/
+.part-reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F6F6F6;
+  margin-top: 4px;
+  height: 300px;
+}
+.part-reservation h2, .part-reservation p {
+  text-align: center;
+}
+.part-reservation h2 {
+  margin-bottom: 0px;
+  margin-top: 35px;
+  min-width: 275px;
+}
+.part-reservation p {
+  color: #353535;
+  font-size: 18px;
+  font-weight: 300;
+  min-width: 315px;
+  margin-bottom: 27px;
+}
+.part-reservation button {
+  border-radius: 25px;
+  height: 50px;
+  width: 218px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+.part-reservation a :hover {
+  opacity: 0.9;
+}
+
+/*section fonctionnement*/
+.part-fonctionnement {
+  margin: 20px;
+  height: 390px;
+}
+.part-fonctionnement h2 {
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+.part-fonctionnement ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.part-fonctionnement li {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  height: 72.379px;
+  width: 95%;
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.part-fonctionnement li .puce-liste {
+  background-color: #9356DC;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  right: 10px;
+}
+.part-fonctionnement li i {
+  padding: 25px;
+  color: #7e7e7e;
+  padding-left: 15px;
+}
+.part-fonctionnement li .i-couleur {
+  color: #9356DC;
+}
+
+/*section restaurant*/
+.part-restaurants {
+  background-color: #EDEDED;
+  padding: 20px;
+}
+.part-restaurants a {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+.part-restaurants article {
+  background-color: white;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  width: 98%;
+}
+.part-restaurants .carte-image {
+  display: flex;
+  justify-content: flex-end;
+}
+.part-restaurants .etiquette-nouveau {
+  width: 80px;
+  height: 29px;
+  font-weight: 500;
+  color: #278870;
+  background-color: #99E2D0;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  position: absolute;
+  margin-right: 15px;
+}
+.part-restaurants img {
+  width: 100%;
+  height: 170px;
+  border-radius: 25px 25px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.part-restaurants .carte-texte {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+  margin-left: 15px;
+}
+.part-restaurants .carte-texte i {
+  width: 22px;
+  height: 21px;
+}
+.part-restaurants .carte-texte h3 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.part-restaurants .carte-texte p {
+  font-size: 17px;
+  font-weight: 300;
+  margin-top: 0px;
+}
+
+/*media */
+@media screen and (min-width: 992px) {
+  body .part-fonctionnement {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  body .part-fonctionnement ul {
+    flex-direction: row;
+    gap: 30px;
+    padding-left: 0px;
+  }
+  .part-restaurants a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .part-restaurants article {
+    width: 42%;
+  }
+}
+.image {
+  width: auto;
+}
+.image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*section menu*/
+.menu {
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0px 0px;
+  margin: auto;
+  position: relative;
+  bottom: 60px;
+  width: 100%;
+  margin-bottom: -60px;
+}
+.menu__titre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu__titre > h1 {
+  padding-top: 32px;
+  padding-right: 15px;
+  font-weight: 400;
+}
+.menu__titre .coeur {
+  display: block;
+  font-size: 25px;
+}
+.menu__titre .coeur .coeur-vide {
+  position: relative;
+  top: 30px;
+}
+.menu__titre .coeur .coeur-vide :active + .coeur-plein {
+  opacity: 1;
+  transform: scale(1);
+}
+.menu__titre .coeur .coeur-vide .coeur-plein {
+  display: block;
+  position: relative;
+  bottom: 28px;
+  transform: scale(0);
+  opacity: 0;
+  transition: all;
+  color: #9356DC;
+}
+.menu h3 {
+  font-weight: 300;
+  padding-left: 15px;
+}
+.menu h3 span {
+  border-bottom: #99E2D0 solid 2px;
+  padding-bottom: 4px;
+}
+.menu .menu_boite {
+  margin-bottom: 40px;
+}
+.menu .boite {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: white;
+  width: 95%;
+  margin: auto;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  height: 69px;
+  margin-bottom: 12px;
+}
+.menu .boite_texte {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 85%;
+  margin-left: 15px;
+}
+.menu .boite_texte h4 {
+  margin-bottom: 0px;
+}
+.menu .boite_texte p {
+  margin-top: 5px;
+}
+.menu .boite_prix {
+  display: flex;
+  align-items: end;
+  margin-right: 15px;
+}
+.menu .boite_prix p {
+  font-weight: 700;
+}
+.menu .progress {
+  width: 59px;
+}
+.menu .progress i {
+  color: white;
+  position: absolute;
+  top: 26px;
+  right: 16px;
+}
+.menu .progress:hover > .progress__bloc {
+  transform: scaleX(1);
+}
+.menu .progress__bloc {
+  background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  height: 69px;
+  transform: scaleX(0);
+  transition: transform 400ms cubic-bezier(0.32, 0, 0.07, 1);
+  transform-origin: right;
+}
+.menu .bouton {
+  display: flex;
+  justify-content: center;
+}
+.menu .bouton button {
+  border-radius: 25px;
+  height: 50px;
+  width: 218px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.menu .bouton a :hover {
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 992px) {
+  .menu {
+    max-width: 992px;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,33 +1,4 @@
-/*variables*/
-$couleur-primaire: #9356DC;
-$couleur-secondaire:#FF79DA;
-$couleur-tertiaire:#99E2D0;
-$couleur-texte1:#353535;
-$couleur-fond1:#EAEAEA;
-$couleur-fond2:#F6F6F6;
-$marge:20px;
-$ombre:0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-$degrade:linear-gradient($couleur-secondaire, $couleur-primaire );
 
-/*mixins*/ 
-@mixin liens{
-    color: black;
-    text-decoration: none;
-}
-
-
-body{
-    margin: 0px;
-    min-width: 375px;
-    h1, h2, h3, h4, p, button, a, li{
-        font-family: Roboto,sans-serif;
-    }
-}
-
-
-
-
-/*section formulaire*/
 .part-lieu{
     display: flex;
     justify-content: center;
@@ -67,13 +38,13 @@ body{
     & h2{
         margin-bottom: 0px;
         margin-top: 35px;
-        width: 275px;
+        min-width: 275px;
     }
     & p {
         color: $couleur-texte1;
         font-size: 18px;
         font-weight: 300;
-        width: 315px;
+        min-width: 315px;
         margin-bottom: 27px;
     }
     & button{
@@ -89,9 +60,8 @@ body{
         font-weight: 500;
     } 
     & a{
-        transition: all 1000ms;
+        
         & :hover{
-            transform: scale(1.001);
             opacity: 0.9;
             
         }
@@ -119,7 +89,7 @@ body{
         background-color: $couleur-fond2;
         box-shadow: $ombre;
         height: 72.379px;
-        width: 322.486px;
+        width: 95%;
         margin-bottom: 24px;
         font-weight:500;
         font-size: 16px;
@@ -154,7 +124,7 @@ body{
     background-color: #EDEDED;
     padding: $marge;
     & a{
-        @include liens;
+       @include liens;
         display: flex;
         justify-content: center;
     }
@@ -162,7 +132,7 @@ body{
         background-color: white;
         border-radius: 25px ;
         margin-bottom: 15px;
-        width: 340px;
+        width: 98%;
     }
     & .carte-image{
         display: flex;
@@ -183,7 +153,7 @@ body{
         margin-right: 15px;
     }
     & img{
-        width: 340px;
+        width: 100%;
         height: 170px;
         border-radius: 25px 25px 0px 0px;
         object-fit: cover;
@@ -212,4 +182,28 @@ body{
         
     }
 
+}
+
+/*media */
+@media screen and (min-width:992px){
+    body
+    .part-fonctionnement{ 
+        height: fit-content;
+     & ul{
+         flex-direction: row;
+         gap: 30px;
+         padding-left: 0px;}
+    }
+    .part-restaurants{
+        & a{ 
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+           
+        }
+        & article{
+            width: 42%;
+            
+        }
+    }
 }

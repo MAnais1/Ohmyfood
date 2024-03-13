@@ -11,13 +11,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../sass/restau.css">
-    <link rel="stylesheet" href="../sass/header.css">
-    <link rel="stylesheet" href="../sass/footer.css">
+    <link rel="stylesheet" href="../sass/main.css">
+    
 </head>
 <body>
     <header>
-        <i class="fa-solid fa-arrow-left"></i>
+        <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
         <img src="../images/logo/ohmyfood.png" alt="logo" class="logo-en-tete">
     </header> 
     <main>
@@ -25,7 +24,16 @@
             <img src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
         </section>
         <section class="menu">
-            <h1>La palette du goût <i class="fa-regular fa-heart"></i></h1>
+            <div class="menu__titre">
+                <h1 >La palette du goût </h1>
+                <div class="coeur">
+                    <div class="coeur-vide">
+                        <i class="fa-regular fa-heart"></i> 
+                        <i class="fa-solid fa-heart coeur-plein"></i>
+                        
+                    </div>
+                </div>
+            </div>
             <div class="menu_boite">
                 <h3><span>ENTR</span>ÉES</h3>
                 <div class="boite">
@@ -36,6 +44,11 @@
                     <div class="boite_prix">
                         <p>25€</p>
                     </div>
+                    <div class="progress">
+                        <div class="progress__bloc">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="boite">
                     <div class="boite_texte">
@@ -45,6 +58,11 @@
                     <div class="boite_prix">
                         <p>35€</p>
                     </div>
+                    <div class="progress">
+                        <div class="progress__bloc">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="boite">
                     <div class="boite_texte">
@@ -53,6 +71,11 @@
                     </div>
                     <div class="boite_prix">
                         <p>20€</p>
+                    </div>
+                    <div class="progress">
+                        <div class="progress__bloc">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                     </div>
                 </div>
                 </div>
@@ -67,6 +90,11 @@
                     <div class="boite_prix">
                         <p>40€</p>
                     </div>
+                    <div class="progress">
+                        <div class="progress__bloc">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="boite">
                     <div class="boite_texte">
@@ -76,6 +104,11 @@
                     <div class="boite_prix">
                         <p>35€</p>
                     </div>
+                    <div class="progress">
+                        <div class="progress__bloc">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="boite">
                     <div class="boite_texte">
@@ -84,6 +117,11 @@
                     </div>
                     <div class="boite_prix">
                         <p>44€</p>
+                    </div>
+                    <div class="progress">
+                        <div class="progress__bloc">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                     </div>
                 </div>
                 </div>
@@ -98,6 +136,11 @@
                     <div class="boite_prix">
                         <p>18€</p>
                     </div>
+                    <div class="progress">
+                        <div class="progress__bloc">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="boite">
                     <div class="boite_texte">
@@ -106,6 +149,11 @@
                     </div>
                     <div class="boite_prix">
                         <p>22€</p>
+                    </div>
+                    <div class="progress">
+                        <div class="progress__bloc">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="boite">
@@ -116,11 +164,16 @@
                     <div class="boite_prix">
                         <p>23€ </p>
                     </div>
+                    <div class="progress">
+                        <div class="progress__bloc">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
                 </div>
                 </div>
             </div>
             <div class="bouton">
-                <button>Commander</button>
+                <a href=""><button>Commander</button></a>
             </div>
         </section>
     </main>
@@ -131,7 +184,7 @@
                 <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
                 <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
                 <li>Mentions légales</li>
-                <a href=""><li>Contact</li></a>
+                <a href="Ohmyfood@gmail.fr"><li>Contact</li></a>
             </ul>
         </div>
     </footer>
