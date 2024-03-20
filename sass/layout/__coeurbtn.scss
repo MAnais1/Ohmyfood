@@ -1,0 +1,38 @@
+.btn-coeur{
+    font-size: 1.5em;
+    &__vi {
+        position: relative;
+        top: 14px;
+        font-weight: 100;
+        z-index: 2;
+    }
+    &__pl {
+        position: relative;
+        bottom: 14px;
+        z-index: 0;
+        transform:scale(0) ;
+        background: linear-gradient(176deg, #9356DC 0%, #FF79DA 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &:hover{
+        .btn-coeur__vi {
+            opacity: 0;
+        }
+        .btn-coeur__pl {
+            transform: scale(1);
+        }
+    }
+}
+.btn-coeur--accu {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    &::after {
+        content: "";
+        z-index: 1;
+        transition: transform 500ms cubic-bezier(0.55, 1.2, 0.93, 1);
+        background: #f6f6f6;
+    }
+} 

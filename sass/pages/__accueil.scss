@@ -58,6 +58,7 @@
         color: white;
         font-size: 16px;
         font-weight: 500;
+        cursor: pointer;
     } 
     & a{
         
@@ -123,6 +124,7 @@
 .part-restaurants{
     background-color: #EDEDED;
     padding: $marge;
+   
     & a{
        @include liens;
         display: flex;
@@ -132,7 +134,7 @@
         background-color: white;
         border-radius: 25px ;
         margin-bottom: 15px;
-        width: 98%;
+        width: 88%;
     }
     & .carte-image{
         display: flex;
@@ -164,9 +166,9 @@
         justify-content: space-between;
         margin-right: 20px;
         margin-left: 15px;
-        & i{
-            width: 22px;
-            height: 21px;
+        .coeur{
+            margin-bottom: 35px;
+            margin-right: 20px;
         }
         
         & h3{
@@ -186,24 +188,37 @@
 
 /*media */
 @media screen and (min-width:992px){
-    body
-    .part-fonctionnement{ 
+    body{
+        .part-fonctionnement{ 
         height: fit-content;
-     & ul{
-         flex-direction: row;
-         gap: 30px;
-         padding-left: 0px;}
-    }
-    .part-restaurants{
-        & a{ 
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-           
+        max-width: 1200px;
+        margin: auto;
+        & ul{
+             flex-direction: row;
+             gap: 30px;
+            padding-left: 0px;
+            }
         }
-        & article{
-            width: 42%;
-            
+        .part-restaurants{
+            h2{
+                max-width: 1200px;
+                margin: auto;
+            }
+            .restau-media{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                max-width: 1200px;
+                margin: auto;
+               
+            }
+            a{
+                width: 46%;
+                margin-top: 30px;
+            }
+            article{
+                width: 100%;
+            }
         }
     }
 }
