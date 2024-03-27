@@ -39,6 +39,53 @@
     & .menu_boite{
         margin-bottom: 40px;
     }
+    & .anim__cascade1{
+        animation: anim-cascade1 2000ms 100ms;
+    }
+    @keyframes anim-cascade1{
+        from{
+            transform: scale(0);
+            opacity: 0;
+        }
+        to{
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    & .anim__cascade2{
+        animation: anim-cascade2 3000ms 100ms;
+    }
+    @keyframes anim-cascade2{
+        0%{
+            transform: scale(0);
+            opacity: 0;
+        }
+        20%{
+            transform: scale(0);
+            opacity: 0;
+        }
+        100%{
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    & .anim__cascade3{
+        animation: anim-cascade3 4000ms 100ms;
+    }
+    @keyframes anim-cascade3{
+        0%{
+            transform: scale(0);
+            opacity: 0;
+        }
+        30%{
+            transform: scale(0);
+            opacity: 0;
+        }
+        100%{
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
     & .boite{
         display: flex;
         justify-content: space-between;
@@ -62,10 +109,21 @@
             overflow: hidden;
             white-space: nowrap;
             & h4{
+                margin-top: 0px;
                 margin-bottom: 0px;
+                padding-bottom: 6px;
+                padding-top: 11px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
             & p{
-                margin-top: 5px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin-top: 0px;
+                padding-top: 0px;
+                padding-bottom: 2px;
             }
             &__para{
                 display: flex;
@@ -111,7 +169,7 @@
             color: white;
             position: absolute;
             top: 26px;
-            right: 16px;
+            right: 22px;
         }
         
         &__bloc{

@@ -1,4 +1,99 @@
 
+.loader{
+    font-family: shrikhand;
+    font-size: 60px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:$couleur-fond2;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loader-div 9s;
+    opacity: 0;
+    
+    .lettre{
+        color: $couleur-primaire;
+        text-shadow: 0 0 7px $couleur-tertiaire;
+        opacity: 0;
+        animation: anim-lettre 7s;
+        transform: scale(0.5);
+        &:nth-child(1){
+            animation-delay: 100ms;
+        }
+        &:nth-child(2){
+            animation-delay: 200ms;
+        }
+        &:nth-child(3){
+            animation-delay: 300ms;
+        }
+        &:nth-child(4){
+            animation-delay: 400ms;
+        }
+        &:nth-child(5){
+            animation-delay: 500ms;
+        }
+        &:nth-child(6){
+            animation-delay: 600ms;
+        }
+        &:nth-child(7){
+            animation-delay: 700ms;
+        }
+        
+    }
+    @keyframes anim-lettre{
+        0%{
+            opacity: 1;
+        }
+        10%{
+            opacity: 0;
+        }
+        20%{
+            opacity: 1;
+            transform: scale(0.5);
+        }
+        30%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 1;
+            transform: scale(0.7);
+        }
+        60%{
+            opacity: 0;
+        }
+        75%{
+            opacity: 1;
+            transform: scale(0.8);
+        }
+        82%{
+            opacity: 0;
+        }
+        95% {
+            opacity: 1;
+            transform: scale(0.9);
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1);
+        }
+
+    }
+}
+@keyframes loader-div{
+    0%{
+        opacity: 1;
+        z-index: 3;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: 3;
+    }
+}
 .part-lieu{
     display: flex;
     justify-content: center;
