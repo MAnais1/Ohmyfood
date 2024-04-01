@@ -273,7 +273,10 @@ footer a {
   min-width: 315px;
   margin-bottom: 27px;
 }
-.part-reservation button {
+.part-reservation div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 25px;
   height: 50px;
   width: 218px;
@@ -284,6 +287,9 @@ footer a {
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
+}
+.part-reservation a {
+  text-decoration: none;
 }
 .part-reservation a :hover {
   opacity: 0.9;
@@ -441,6 +447,7 @@ footer a {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  max-height: 500px;
 }
 
 /*section menu*/
@@ -609,7 +616,10 @@ footer a {
   display: flex;
   justify-content: center;
 }
-.menu .bouton button {
+.menu .bouton-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 25px;
   height: 50px;
   width: 218px;
@@ -621,6 +631,9 @@ footer a {
   font-weight: 500;
   margin-bottom: 40px;
   cursor: pointer;
+}
+.menu .bouton a {
+  text-decoration: none;
 }
 .menu .bouton a :hover {
   opacity: 0.9;
