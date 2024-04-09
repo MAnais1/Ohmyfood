@@ -126,7 +126,7 @@
     align-items: center;
     background-color: $couleur-fond2;
     margin-top: 4px;
-    height:300px;
+    height:220px;
     & h2, p{
         text-align: center;
     }
@@ -191,6 +191,7 @@
         margin-bottom: 24px;
         font-weight:500;
         font-size: 16px;
+        cursor: pointer;
         & .puce-liste{
             background-color: $couleur-primaire;
             color: white;
@@ -203,17 +204,18 @@
             width: 24px;
             height: 24px;
             position: relative;
-            right: 10px;
-            
+            right: 10px; 
         }
         & i{
            padding:25px;
            color: #7e7e7e;
            padding-left: 15px;
         }
-        & .i-couleur{
+        &:hover{
+            i{
             color: $couleur-primaire;
-        }
+            }
+        }  
     }
 }
 

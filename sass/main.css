@@ -256,7 +256,7 @@ footer a {
   align-items: center;
   background-color: #F6F6F6;
   margin-top: 4px;
-  height: 300px;
+  height: 220px;
 }
 .part-reservation h2, .part-reservation p {
   text-align: center;
@@ -321,6 +321,7 @@ footer a {
   margin-bottom: 24px;
   font-weight: 500;
   font-size: 16px;
+  cursor: pointer;
 }
 .part-fonctionnement li .puce-liste {
   background-color: #9356DC;
@@ -341,7 +342,7 @@ footer a {
   color: #7e7e7e;
   padding-left: 15px;
 }
-.part-fonctionnement li .i-couleur {
+.part-fonctionnement li:hover i {
   color: #9356DC;
 }
 
